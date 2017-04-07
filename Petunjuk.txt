@@ -1,0 +1,9 @@
+Pertama Buat Query untuk menggabungkan nilai value dari 2 tabel database yang berbeda dengan query di bawah ini,, (referensi indikator_model function select_indikator_by_id_kategori($nip))
+
+select hasil_seleksi_syarat.id_hasil,hasil_seleksi_syarat.id_jabatankosong,hasil_seleksi_syarat.id_pegawai,hasil_seleksi_syarat.gap,profil_syarat_jabatan.nilai_pangkat,profil_syarat_jabatan.nilai_pendidikan,pegawai.nama,profil_syarat_pegawai.nilai_pangkat,profil_syarat_pegawai.nilai_pendidikan from hasil_seleksi_syarat join jabatan_kosong on jabatan_kosong.id_jabatankosong=hasil_seleksi_syarat.id_jabatankosong join profil_syarat_jabatan on jabatan_kosong.id_jabatankosong=profil_syarat_jabatan.id_jabatankosong join pegawai on pegawai.id_pegawai=hasil_seleksi_syarat.id_pegawai join profil_syarat_pegawai on pegawai.id_pegawai=profil_syarat_pegawai.id_pegawai
+
+Habis itu value2 tabel tadi simpen dalem array (refensi controller indikator function pencapaian_indikator())
+
+baru bisa dijumlahke value2 yang ado dlem tabel itu,, 
+
+Nah kalo referensi viewnyo buka pencapaian_indikator
